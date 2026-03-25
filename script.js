@@ -147,6 +147,7 @@ function initContactForm() {
 }
 
 
+function setYear() {
     const y = qs("#year");
     if (y) y.textContent = new Date().getFullYear();
 }
