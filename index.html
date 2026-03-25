@@ -1,0 +1,1000 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Subhasish Sahoo — Professional Video Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js" defer></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js" defer></script>
+
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <span class="loader-text">Crafting your reel</span>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress">
+        <div id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- WebGL BG -->
+    <canvas id="webgl-bg"></canvas>
+
+    <!-- Smooth-scroll wrapper -->
+    <div id="app">
+        <!-- NAV -->
+        <header class="nav">
+            <div class="nav-left">
+                <div class="nav-logo-dot"></div>
+                <span class="nav-logo-text">Subhasish&nbsp;Sahoo</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#showreel">Showreel</a>
+                <a href="#portfolio">Work</a>
+                <a href="#process">Process</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contact" class="btn-outline">Hire Me</a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero" class="section hero">
+
+            <!-- Ambient background orbs -->
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+
+            <!-- Left: Content -->
+            <div class="hero-content">
+
+                <div class="hero-availability">
+                    <span class="hero-avail-dot"></span>
+                    <span>Available for projects</span>
+                </div>
+
+                <div class="hero-label">New Delhi &nbsp;Â·&nbsp; Video Editor</div>
+
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Subhasish</span>
+                    <span class="hero-title-line hero-title-accent">Sahoo</span>
+                </h1>
+
+                <p class="hero-tagline">
+                    Professional video editor shaping cinematic narratives<br>
+                    for brands, startups, and creators.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn-primary">
+                        <span class="btn-primary-glow"></span>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn-ghost">Hire Me</a>
+                </div>
+
+                <div class="hero-skills-row">
+                    <span class="hero-skill-pill">Video Editing</span>
+                    <span class="hero-skill-sep">Â·</span>
+                    <span class="hero-skill-pill">Motion Graphics</span>
+                    <span class="hero-skill-sep">Â·</span>
+                    <span class="hero-skill-pill">Sound Designing</span>
+                </div>
+
+            </div>
+
+            <!-- Right: Visual -->
+            <div class="hero-side">
+
+                <div class="hero-visual">
+
+                    <!-- Rotating ring -->
+                    <div class="hero-ring hero-ring-outer"></div>
+                    <div class="hero-ring hero-ring-inner"></div>
+
+                    <!-- Avatar frame -->
+                    <div class="hero-avatar-wrap">
+                        <div class="hero-avatar-glow"></div>
+                        <div class="hero-avatar">
+                            <img src="assets/images/profile-portrait.jpeg" alt="Subhasish Sahoo" />
+                        </div>
+                    </div>
+
+                    <!-- Floating stat cards -->
+                    <div class="hero-stat-card hero-stat-card--tl">
+                        <span class="hero-stat-num">40<span>+</span></span>
+                        <span class="hero-stat-lbl">Projects</span>
+                    </div>
+
+                    <div class="hero-stat-card hero-stat-card--br">
+                        <span class="hero-stat-num">300<span>+</span></span>
+                        <span class="hero-stat-lbl">Hours Edited</span>
+                    </div>
+
+                    <!-- Format badge -->
+                    <div class="hero-format-badge">
+                        <span class="hero-format-dot"></span>
+                        <span>4K &nbsp;Â·&nbsp; ProRes</span>
+                    </div>
+
+                </div>
+
+                <!-- Info badges -->
+                <div class="hero-badges">
+                    <div class="hero-badge">
+                        <span class="hero-badge-icon">â—Ž</span>
+                        <div>
+                            <span class="hero-badge-label">Available for</span>
+                            <span class="hero-badge-value">Freelance &amp; Studio Work</span>
+                        </div>
+                    </div>
+                    <div class="hero-badge">
+                        <span class="hero-badge-icon">â–¶</span>
+                        <div>
+                            <span class="hero-badge-label">Currently at</span>
+                            <span class="hero-badge-value">UniConverge Technologies &amp; <br> IoT Academy</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </section>
+        <!-- SHOWREEL -->
+        <section id="showreel" class="section showreel">
+            <div class="sr-wrap">
+
+                <!-- Header -->
+                <div class="sr-header">
+                    <div class="sr-eyebrow"><span class="sr-eyebrow-dot"></span><span>Showreel 2025</span></div>
+                    <h2 class="sr-title">Director's Cut<br><em>Showreel</em></h2>
+                    <p class="sr-sub">Main reel &middot; Long-format films &middot; Vertical reels &mdash; crafted for every screen.</p>
+                </div>
+
+                <!-- Hero Reel -->
+                <div class="sr-hero" data-open-modal data-video-src="assets/videos/showreel1.mov">
+                    <div class="sr-hero-poster"></div>
+                    <div class="sr-hero-grain"></div>
+                    <div class="sr-hero-vignette"></div>
+                    <span class="sr-corner tl"></span>
+                    <span class="sr-corner tr"></span>
+                    <span class="sr-corner bl"></span>
+                    <span class="sr-corner br"></span>
+                    <div class="sr-hero-topbar">
+                        <span class="sr-live-dot"></span>
+                        <span class="sr-live-label">Director&rsquo;s Cut</span>
+                        <span class="sr-hero-year">2025</span>
+                    </div>
+                    <div class="sr-hero-info">
+                        <h3>Subhasish Sahoo<br><em>Showreel</em></h3>
+                        <p>Commercial, YouTube, short-form &mdash; every style in one cut.</p>
+                        <div class="sr-hero-actions">
+                            <button class="sr-play-btn">
+                                <span class="sr-play-icon"><span class="sr-play-ripple"></span></span>
+                                Play Reel
+                            </button>
+                            <span class="sr-dur">&#9654;&nbsp;2:45</span>
+                        </div>
+                    </div>
+                    <div class="sr-format-badge">
+                        <span class="sr-format-dot"></span>16:9 &nbsp;&middot;&nbsp; 4K
+                    </div>
+                </div>
+
+                <!-- Ticker -->
+                <div class="sr-ticker" aria-hidden="true">
+                    <div class="sr-ticker-track">
+                        <span>Long Format</span><span class="sr-sep">&#9679;</span>
+                        <span>Brand Films</span><span class="sr-sep">&#9679;</span>
+                        <span>YouTube Series</span><span class="sr-sep">&#9679;</span>
+                        <span>Corporate</span><span class="sr-sep">&#9679;</span>
+                        <span>Reels &amp; Shorts</span><span class="sr-sep">&#9679;</span>
+                        <span>Motion Graphics</span><span class="sr-sep">&#9679;</span>
+                        <span>Color Grading</span><span class="sr-sep">&#9679;</span>
+                        <span>Long Format</span><span class="sr-sep">&#9679;</span>
+                        <span>Brand Films</span><span class="sr-sep">&#9679;</span>
+                        <span>YouTube Series</span><span class="sr-sep">&#9679;</span>
+                        <span>Corporate</span><span class="sr-sep">&#9679;</span>
+                        <span>Reels &amp; Shorts</span><span class="sr-sep">&#9679;</span>
+                        <span>Motion Graphics</span><span class="sr-sep">&#9679;</span>
+                        <span>Color Grading</span><span class="sr-sep">&#9679;</span>
+                    </div>
+                </div>
+
+                <!-- Row 01: Long Format -->
+                <div>
+                    <div class="sr-row-header">
+                        <span class="sr-row-num">01</span>
+                        <span class="sr-row-name">Long Format</span>
+                        <span class="sr-row-line"></span>
+                    </div>
+                    <div class="sr-long-grid">
+
+                        <div class="sr-long-card" data-open-modal data-video-src="assets/videos/Copy of Summer training vs summer internship (1).mp4">
+                            <div class="sr-long-thumb">
+                                <div class="sr-lp sr-lp-1"></div>
+                                <div class="sr-thumb-overlay"></div>
+                                <div class="sr-thumb-play"><div class="sr-thumb-play-circle"></div></div>
+                                <span class="sr-badge sr-badge-yt">YouTube</span>
+                                <span class="sr-thumb-dur">12:30</span>
+                            </div>
+                            <div class="sr-long-meta">
+                                <span class="sr-long-cat">Educational</span>
+                                <h4>IoT Academy &mdash; Lecture Series</h4>
+                                <p>Deep-dives with motion graphics and chapter markers.</p>
+                            </div>
+                        </div>
+
+                        <div class="sr-long-card" data-open-modal data-video-src="assets/videos/Final video (Ad copy) (1).mp4">
+                            <div class="sr-long-thumb">
+                                <div class="sr-lp sr-lp-2"></div>
+                                <div class="sr-thumb-overlay"></div>
+                                <div class="sr-thumb-play"><div class="sr-thumb-play-circle"></div></div>
+                                <span class="sr-badge sr-badge-brand">Brand Film</span>
+                                <span class="sr-thumb-dur">4:15</span>
+                            </div>
+                            <div class="sr-long-meta">
+                                <span class="sr-long-cat">Brand</span>
+                                <h4>UniConverge &mdash; Product Story</h4>
+                                <p>Cinematic brand narrative cut for emotional impact.</p>
+                            </div>
+                        </div>
+
+                        <div class="sr-long-card" data-open-modal data-video-src="assets/videos/showreel1.mov">
+                            <div class="sr-long-thumb">
+                                <div class="sr-lp sr-lp-3"></div>
+                                <div class="sr-thumb-overlay"></div>
+                                <div class="sr-thumb-play"><div class="sr-thumb-play-circle"></div></div>
+                                <span class="sr-badge sr-badge-corp">Corporate</span>
+                                <span class="sr-thumb-dur">6:00</span>
+                            </div>
+                            <div class="sr-long-meta">
+                                <span class="sr-long-cat">Corporate</span>
+                                <h4>Tech Mahindra &mdash; Internal Comms</h4>
+                                <p>Clean corporate film with lower-thirds and colour grade.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Row 02: Reels & Shorts -->
+                <div>
+                    <div class="sr-row-header">
+                        <span class="sr-row-num">02</span>
+                        <span class="sr-row-name">Reels &amp; Shorts</span>
+                        <span class="sr-row-line"></span>
+                    </div>
+                    <div class="sr-phones-grid">
+
+                        <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Every company is chasing answers.mp4">
+                            <div class="sr-phone">
+                                <div class="sr-phone-notch"></div>
+                                <div class="sr-phone-screen">
+                                    <div class="sr-rp sr-rp-1"></div>
+                                    <div class="sr-screen-overlay"></div>
+                                    <div class="sr-screen-play"><div class="sr-screen-play-circle"></div></div>
+                                    <div class="sr-screen-ui">
+                                        <span class="sr-badge sr-badge-reel">Reel</span>
+                                        <span class="sr-screen-dur">0:28</span>
+                                    </div>
+                                    <div class="sr-screen-side">
+                                        <div class="sr-side-icon">&#10084;</div>
+                                        <div class="sr-side-icon">&#128172;</div>
+                                        <div class="sr-side-icon">&#10148;</div>
+                                    </div>
+                                </div>
+                                <div class="sr-phone-bar"></div>
+                                <div class="sr-phone-glow"></div>
+                            </div>
+                            <div class="sr-phone-info">
+                                <h4>Brand Hook Reel</h4>
+                                <p>Stop-scroll opener for product launch.</p>
+                            </div>
+                        </div>
+
+                        <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Copy of JEE mains result.mp4">
+                            <div class="sr-phone">
+                                <div class="sr-phone-notch"></div>
+                                <div class="sr-phone-screen">
+                                    <div class="sr-rp sr-rp-2"></div>
+                                    <div class="sr-screen-overlay"></div>
+                                    <div class="sr-screen-play"><div class="sr-screen-play-circle"></div></div>
+                                    <div class="sr-screen-ui">
+                                        <span class="sr-badge sr-badge-shorts">Shorts</span>
+                                        <span class="sr-screen-dur">0:58</span>
+                                    </div>
+                                    <div class="sr-screen-side">
+                                        <div class="sr-side-icon">&#10084;</div>
+                                        <div class="sr-side-icon">&#128172;</div>
+                                        <div class="sr-side-icon">&#10148;</div>
+                                    </div>
+                                </div>
+                                <div class="sr-phone-bar"></div>
+                                <div class="sr-phone-glow"></div>
+                            </div>
+                            <div class="sr-phone-info">
+                                <h4>YouTube Short &mdash; Ed-tech</h4>
+                                <p>Fast-cut educational short with bold typography.</p>
+                            </div>
+                        </div>
+
+                        <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Altera Institute.mp4">
+                            <div class="sr-phone">
+                                <div class="sr-phone-notch"></div>
+                                <div class="sr-phone-screen">
+                                    <div class="sr-rp sr-rp-3"></div>
+                                    <div class="sr-screen-overlay"></div>
+                                    <div class="sr-screen-play"><div class="sr-screen-play-circle"></div></div>
+                                    <div class="sr-screen-ui">
+                                        <span class="sr-badge sr-badge-reel">Reel</span>
+                                        <span class="sr-screen-dur">0:30</span>
+                                    </div>
+                                    <div class="sr-screen-side">
+                                        <div class="sr-side-icon">&#10084;</div>
+                                        <div class="sr-side-icon">&#128172;</div>
+                                        <div class="sr-side-icon">&#10148;</div>
+                                    </div>
+                                </div>
+                                <div class="sr-phone-bar"></div>
+                                <div class="sr-phone-glow"></div>
+                            </div>
+                            <div class="sr-phone-info">
+                                <h4>Lifestyle Reel &mdash; Paraayan</h4>
+                                <p>Mood-driven vertical cut with colour-graded aesthetic.</p>
+                            </div>
+                        </div>
+
+                        <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Resume ka kaam past dikhana nahi.mp4">
+                            <div class="sr-phone">
+                                <div class="sr-phone-notch"></div>
+                                <div class="sr-phone-screen">
+                                    <div class="sr-rp sr-rp-4"></div>
+                                    <div class="sr-screen-overlay"></div>
+                                    <div class="sr-screen-play"><div class="sr-screen-play-circle"></div></div>
+                                    <div class="sr-screen-ui">
+                                        <span class="sr-badge sr-badge-shorts">Shorts</span>
+                                        <span class="sr-screen-dur">0:45</span>
+                                    </div>
+                                    <div class="sr-screen-side">
+                                        <div class="sr-side-icon">&#10084;</div>
+                                        <div class="sr-side-icon">&#128172;</div>
+                                        <div class="sr-side-icon">&#10148;</div>
+                                    </div>
+                                </div>
+                                <div class="sr-phone-bar"></div>
+                                <div class="sr-phone-glow"></div>
+                            </div>
+                            <div class="sr-phone-info">
+                                <h4>Tech Explainer Short</h4>
+                                <p>Motion-graphics-led short for IoT product awareness.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="about-image">
+                <div class="about-image-frame">
+                    <div class="about-image-inner"><img src="assets/images/about-img.jpeg" alt=""></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="section-label">About</div>
+                <h2>Cinematic editing crafted in New Delhi</h2>
+                <p>
+                    I’m Subhasish Sahoo, a New Delhi–based video editor with experience
+                    cutting content for tech brands, ed‑tech platforms, and digital creators.
+                </p>
+                <p>
+                    Currently, I edit for UniConverge Technologies and The IoT Academy in Noida,
+                    turning raw ideas into polished visuals that feel sharp and on‑brand.
+                </p>
+
+                <div class="about-meta-grid">
+                    <div class="about-meta-item">
+                        <span class="meta-label">Based in</span>
+                        <span class="meta-value">New Delhi, India</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-label">Experience</span>
+                        <span class="meta-value">Professional since 2024</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-label">Current roles</span>
+                        <span class="meta-value">UniConverge Technologies Pvt. Ltd. <br>The IoT Academy</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-label">Education</span>
+                        <span class="meta-value">BCA (Data Science), <br>Amity University</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2>Capabilities in Focus</h2>
+                <p>From raw footage to final frame‑perfect delivery.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Video Editing</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Motion Graphics</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Visual Story Telling</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Color Grading</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Sound Designing</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 78%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Long & Short‑Form Videos</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="--target-width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <section class="section stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="40">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Clients</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="300">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Hours of Footage Edited</span>
+                </div>
+                <div class="stat-divider"></div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section portfolio">
+            <div class="section-header">
+                <h2>Selected Work</h2>
+                <p>Brand films, educational content, and social‑first edits — each cut with intent.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="portfolio-filters">
+                <button class="pf-btn active" data-filter="all">All</button>
+                <button class="pf-btn" data-filter="edu">Educational</button>
+                <button class="pf-btn" data-filter="short">Short‑form</button>
+                <button class="pf-btn" data-filter="corporate">Corporate</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="portfolio-masonry">
+
+                <!-- Featured large card -->
+                <article class="portfolio-card portfolio-card--featured" data-category="brand" data-open-modal data-video-src="assets/videos/Final video (Ad copy) (1).mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-1"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Brand Film</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Tech Narratives — UniConverge</h3>
+                    <p class="pc-desc">Product explainers and corporate stories cut for clarity, pace, and brand authority. Motion graphics layered over live footage.</p>
+                </article>
+
+                <!-- Small card 2 -->
+                <article class="portfolio-card" data-category="edu" data-open-modal data-video-src="assets/videos/Copy of Summer training vs summer internship (1).mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-2"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Educational</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Learning Films — IoT Academy</h3>
+                    <p class="pc-desc">Lecture series and promo edits with tight structure and animated overlays.</p>
+                </article>
+
+                <!-- Small card 3 -->
+                <article class="portfolio-card" data-category="short" data-open-modal data-video-src="assets/videos/Altera Institute.mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-3"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Short‑form</span>
+                        <span class="pc-year">2024</span>
+                    </div>
+                    <h3 class="pc-title">Reels & Shorts — Paraayan.com</h3>
+                    <p class="pc-desc">Hook‑driven vertical cuts optimised for Instagram and YouTube Shorts retention.</p>
+                </article>
+
+                <!-- Small card 4 -->
+                <article class="portfolio-card" data-category="corporate" data-open-modal data-video-src="assets/videos/Every company is chasing answers.mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-4"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Corporate</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Corporate Identity Films</h3>
+                    <p class="pc-desc">Clean, cinematic internal communications and brand identity videos for tech companies.</p>
+                </article>
+
+                <!-- Wide card 5 -->
+                <article class="portfolio-card portfolio-card--wide" data-category="brand" data-open-modal data-video-src="assets/videos/Copy of JEE mains result.mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-2"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Brand Film</span>
+                        <span class="pc-year">2024</span>
+                    </div>
+                    <h3 class="pc-title">Product Launch Campaign</h3>
+                    <p class="pc-desc">Full campaign edit suite — hero film, 30s cut-down, and social variants — delivered in a single pipeline.</p>
+                </article>
+
+                <!-- Small card 6 -->
+                <article class="portfolio-card" data-category="short" data-open-modal data-video-src="assets/videos/Resume ka kaam past dikhana nahi.mp4">
+                    <div class="pc-thumb" data-tilt>
+                        <div class="pc-img pc-img-4"></div>
+                        <div class="pc-gradient"></div>
+                        <div class="pc-hover-cta"><span>▶ Watch Project</span></div>
+                    </div>
+                    <div class="pc-meta">
+                        <span class="pc-tag">Short‑form</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Viral Reel Series</h3>
+                    <p class="pc-desc">10‑part weekly reel series with consistent visual language and hook templates.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="section process">
+            <div class="section-header">
+                <h2>The Edit Process</h2>
+                <p>From first brief to final export — a clear, collaborative pipeline every time.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-num">01</div>
+                    <div class="process-icon">&#9998;</div>
+                    <h3>Story Boarding</h3>
+                    <p>We align on goals, audience, tone, and references before a single frame is touched.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-num">02</div>
+                    <div class="process-icon">&#9654;</div>
+                    <h3>Rough Cut</h3>
+                    <p>A first assembly that locks structure, pacing, and narrative arc for your review.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-num">03</div>
+                    <div class="process-icon">&#10024;</div>
+                    <h3>Polish & Grade</h3>
+                    <p>Motion graphics, sound design, and colour grading applied to the approved cut.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-num">04</div>
+                    <div class="process-icon">&#127925;</div>
+                    <h3>Sound Designing</h3>
+                    <p>Music, SFX, and dialogue balanced to match the mood — every cut feels as good as it looks.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-num">05</div>
+                    <div class="process-icon">&#128228;</div>
+                    <h3>Delivery</h3>
+                    <p>Master file plus platform‑optimised exports — H.264, ProRes, vertical cuts — all in one handoff.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section id="tools" class="section tools">
+            <div class="section-header">
+                <h2>Tools of the Trade</h2>
+                <p>Industry‑standard software, used at a professional level.</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>Adobe Premiere Pro</span>
+                </div>
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>After Effects</span>
+                </div>
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>DaVinci Resolve</span>
+                </div>
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>Adobe Audition</span>
+                </div>
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>Photoshop</span>
+                </div>
+                <div class="tool-pill">
+                    <span class="tool-dot"></span>
+                    <span>CapCut Pro</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section experience">
+            <div class="section-header">
+                <h2>Timeline</h2>
+                <p>A progression from data to direction, now dedicated to editing.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Video Editor — UniConverge Technologies</h3>
+                        <span class="timeline-meta">March 2025 – Present · Noida, Uttar Pradesh</span>
+                        <p>
+                            Editing brand and product content for a technology‑driven audience with focus on polish and
+                            clarity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Video Editor — The IoT Academy</h3>
+                        <span class="timeline-meta">March 2025 – Present · Noida, Uttar Pradesh</span>
+                        <p>
+                            Crafting educational videos, lectures, and promos with motion graphics overlays and clear
+                            structure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Video Editor — Paraayan.com</h3>
+                        <span class="timeline-meta">December 2024 – March 2025 · Noida</span>
+                        <p>
+                            Delivered YouTube and digital content edits tuned for engagement and retention.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Data Researcher — Leap</h3>
+                        <span class="timeline-meta">December 2023 – December 2024 · Noida</span>
+                        <p>
+                            Analysed data and user patterns, informing data‑driven creative decisions in editing
+                            today.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Customer Care Executive — Tech Mahindra</h3>
+                        <span class="timeline-meta">April 2023 – October 2023 · Noida</span>
+                        <p>
+                            Built strong communication skills, helping translate client feedback into better visual
+                            outcomes.
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section services">
+            <div class="section-header">
+                <h2>Services</h2>
+                <p>Modular, production‑ready services designed for brands and creators.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon service-icon-edit"></div>
+                    <h3>Video Editing</h3>
+                    <p>End‑to‑end editing for ads, brand films, interviews, and explainers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-youtube"></div>
+                    <h3>YouTube Long-Form</h3>
+                    <p>Retention‑focused edits, hooks, and pacing tailored for YouTube.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-shorts"></div>
+                    <h3>Short‑form Content</h3>
+                    <p>Reels and Shorts cut to stop the scroll and drive engagement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-corp"></div>
+                    <h3>Corporate Films</h3>
+                    <p>Clean, cinematic corporate videos and internal communications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-mograph"></div>
+                    <h3>Motion Graphics</h3>
+                    <p>Title design, lower‑thirds, infographics, and animated explainers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-color"></div>
+                    <h3>Color Grading</h3>
+                    <p>Consistent color pipelines and mood‑driven looks for each project.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS
+        <section id="testimonials" class="section testimonials">
+            <div class="section-header">
+                <h2>What collaborators say</h2>
+                <p>Selected words from teams and clients.</p>
+            </div>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <article class="testimonial">
+                        <p>
+                            “Subhasish brings structure and calm to every edit. Tight deadlines feel
+                            manageable when the timeline is in his hands.”
+                        </p>
+                        <span class="testimonial-name">Creative Lead</span>
+                        <span class="testimonial-role">Tech & Ed‑tech projects</span>
+                    </article>
+                    <article class="testimonial">
+                        <p>
+                            “He understands both content and audience. Our educational videos became
+                            significantly more engaging after his edits.”
+                        </p>
+                        <span class="testimonial-name">Program Manager</span>
+                        <span class="testimonial-role">Education Platform</span>
+                    </article>
+                    <article class="testimonial">
+                        <p>
+                            “From rough brief to final export, he keeps the communication clear and the
+                            visuals sharp.”
+                        </p>
+                        <span class="testimonial-name">Founder</span>
+                        <span class="testimonial-role">Startup Client</span>
+                    </article>
+                </div>
+                <div class="testimonial-dots">
+                    <button class="testimonial-dot active" data-index="0"></button>
+                    <button class="testimonial-dot" data-index="1"></button>
+                    <button class="testimonial-dot" data-index="2"></button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <div class="section-label">Contact</div>
+                    <h2>Let’s cut your next story</h2>
+                    <p>
+                        Share a brief about your project, timeline, and references.
+                        I’ll reply with next steps and a clear roadmap.
+                    </p>
+
+                    <div class="contact-meta">
+                        <div class="contact-meta-item">
+                            <span class="meta-label">Email</span>
+                            <a href="mailto:sahosubhasish@gmail.com" class="meta-value">
+                                sahosubhasish@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-meta-item">
+                            <span class="meta-label">Phone</span>
+                            <a href="tel:+919315744383" class="meta-value">
+                                +91-9315744383
+                            </a>
+                        </div>
+                        <div class="contact-meta-item">
+                            <span class="meta-label">Location</span>
+                            <span class="meta-value">
+                                Sarita Vihar, New Delhi – 110076
+                            </span>
+                        </div>
+                        <div class="contact-meta-item">
+                            <span class="meta-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/subhasish-sahoo-48b730289" target="_blank"
+                                rel="noopener" class="meta-value">
+                                subhasish-sahoo-48b730289
+                            </a>
+                        </div>
+                        <div class="contact-meta-item">
+                            <span class="meta-label">Instagram</span>
+                            <a href="https://www.instagram.com/subh_asishh/" target="_blank"
+                                rel="noopener" class="meta-value">
+                                Subhasish Sahoo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form" id="contact-form" autocomplete="off" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required />
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="project">Project Type</label>
+                            <input id="project" name="project" type="text" placeholder="Brand film, YouTube series, reels…" />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary form-submit" id="form-submit-btn">
+                            <span id="form-btn-text">Send Inquiry</span>
+                        </button>
+                        <p class="form-hint" id="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-left">
+                <span>© <span id="year"></span> Subhasish Sahoo.</span>
+            </div>
+            <div class="footer-nav">
+                <a href="#hero">Home</a>
+                <a href="#portfolio">Work</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>Designed and Built by: </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/himanshu3992/" target="_blank" rel="noopener">
+                    HV
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal-overlay">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close video"></button>
+            <div class="modal-body">
+                <video id="modal-video" controls playsinline>
+                    <source src="assets/videos/showreel1.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
