@@ -4,7 +4,7 @@ const qsa = (s, p = document) => [...p.querySelectorAll(s)];
 
 // Loader and init
 window.addEventListener("load", () => {
-    document.body.classList.add("loaded", "js-ready");
+    document.body.classList.add("js-ready");
 
     let lenis = null;
 
