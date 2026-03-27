@@ -54,6 +54,7 @@
             <nav class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#showreel">Showreel</a>
+                <a href="#motiongraphics">Motion</a>
                 <a href="#portfolio">Work</a>
                 <a href="#process">Process</a>
                 <a href="#services">Services</a>
@@ -62,7 +63,21 @@
             <div class="nav-cta">
                 <a href="#contact" class="btn-outline">Hire Me</a>
             </div>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </header>
+
+        <!-- Mobile Nav Menu -->
+        <nav class="nav-mobile-menu" id="nav-mobile-menu">
+            <a href="#hero" onclick="closeMobileMenu()">Home</a>
+            <a href="#showreel" onclick="closeMobileMenu()">Showreel</a>
+            <a href="#motiongraphics" onclick="closeMobileMenu()">Motion</a>
+            <a href="#portfolio" onclick="closeMobileMenu()">Work</a>
+            <a href="#process" onclick="closeMobileMenu()">Process</a>
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        </nav>
 
         <!-- HERO -->
         <section id="hero" class="section hero">
@@ -253,8 +268,6 @@
                             </div>
                             <div class="sr-long-meta">
                                 <span class="sr-long-cat">Educational</span>
-                                <h4>IoT Academy &mdash; Lecture Series</h4>
-                                <p>Deep-dives with motion graphics and chapter markers.</p>
                             </div>
                         </div>
 
@@ -268,8 +281,6 @@
                             </div>
                             <div class="sr-long-meta">
                                 <span class="sr-long-cat">Brand</span>
-                                <h4>UniConverge &mdash; Product Story</h4>
-                                <p>Cinematic brand narrative cut for emotional impact.</p>
                             </div>
                         </div>
 
@@ -283,8 +294,6 @@
                             </div>
                             <div class="sr-long-meta">
                                 <span class="sr-long-cat">Corporate</span>
-                                <h4>Tech Mahindra &mdash; Internal Comms</h4>
-                                <p>Clean corporate film with lower-thirds and colour grade.</p>
                             </div>
                         </div>
 
@@ -320,10 +329,6 @@
                                 <div class="sr-phone-bar"></div>
                                 <div class="sr-phone-glow"></div>
                             </div>
-                            <div class="sr-phone-info">
-                                <h4>Brand Hook Reel</h4>
-                                <p>Stop-scroll opener for product launch.</p>
-                            </div>
                         </div>
 
                         <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Copy of JEE mains result.mp4">
@@ -345,10 +350,6 @@
                                 </div>
                                 <div class="sr-phone-bar"></div>
                                 <div class="sr-phone-glow"></div>
-                            </div>
-                            <div class="sr-phone-info">
-                                <h4>YouTube Short &mdash; Ed-tech</h4>
-                                <p>Fast-cut educational short with bold typography.</p>
                             </div>
                         </div>
 
@@ -372,10 +373,6 @@
                                 <div class="sr-phone-bar"></div>
                                 <div class="sr-phone-glow"></div>
                             </div>
-                            <div class="sr-phone-info">
-                                <h4>Lifestyle Reel &mdash; Paraayan</h4>
-                                <p>Mood-driven vertical cut with colour-graded aesthetic.</p>
-                            </div>
                         </div>
 
                         <div class="sr-phone-card" data-open-modal data-video-src="assets/videos/Resume ka kaam past dikhana nahi.mp4">
@@ -398,12 +395,51 @@
                                 <div class="sr-phone-bar"></div>
                                 <div class="sr-phone-glow"></div>
                             </div>
-                            <div class="sr-phone-info">
-                                <h4>Tech Explainer Short</h4>
-                                <p>Motion-graphics-led short for IoT product awareness.</p>
-                            </div>
                         </div>
 
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MOTION GRAPHICS -->
+        <section id="motiongraphics" class="section motiongraphics">
+            <div class="mg-wrap">
+
+                <!-- Header -->
+                <div class="sr-header">
+                    <div class="sr-eyebrow"><span class="sr-eyebrow-dot"></span><span>Motion Graphics</span></div>
+                    <h2 class="sr-title">Animated<br><em>Visuals</em></h2>
+                    <p class="sr-sub">Title sequences &middot; Lower-thirds &middot; Infographics &mdash; motion that tells the story.</p>
+                </div>
+
+                <!-- Hero Card -->
+                <div class="mg-hero" data-open-modal="mg" data-video-src="assets/videos/Corex Index.mp4">
+                    <div class="mg-hero-poster"></div>
+                    <div class="sr-hero-grain"></div>
+                    <div class="sr-hero-vignette"></div>
+                    <span class="sr-corner tl"></span>
+                    <span class="sr-corner tr"></span>
+                    <span class="sr-corner bl"></span>
+                    <span class="sr-corner br"></span>
+                    <div class="sr-hero-topbar">
+                        <span class="sr-live-dot"></span>
+                        <span class="sr-live-label">Motion Graphics</span>
+                        <span class="sr-hero-year">2025</span>
+                    </div>
+                    <div class="sr-hero-info">
+                        <h3>Motion<br><em>Reel</em></h3>
+                        <p>Animated titles, infographics &amp; explainers &mdash; every frame in motion.</p>
+                        <div class="sr-hero-actions">
+                            <button class="sr-play-btn">
+                                <span class="sr-play-icon"><span class="sr-play-ripple"></span></span>
+                                Play Reel
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sr-format-badge">
+                        <span class="sr-format-dot"></span>Motion &nbsp;&middot;&nbsp; After Effects
                     </div>
                 </div>
 
@@ -804,32 +840,65 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon service-icon-edit"></div>
+                    <div class="service-icon service-icon-edit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                    </div>
                     <h3>Video Editing</h3>
                     <p>End‑to‑end editing for ads, brand films, interviews, and explainers.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon service-icon-youtube"></div>
+                    <div class="service-icon service-icon-youtube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+                        </svg>
+                    </div>
                     <h3>YouTube Long-Form</h3>
                     <p>Retention‑focused edits, hooks, and pacing tailored for YouTube.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon service-icon-shorts"></div>
+                    <div class="service-icon service-icon-shorts">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12" y2="18"/>
+                            <polygon points="10,8 10,14 15,11" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
                     <h3>Short‑form Content</h3>
                     <p>Reels and Shorts cut to stop the scroll and drive engagement.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon service-icon-corp"></div>
+                    <div class="service-icon service-icon-corp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2"/>
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                            <line x1="12" y1="12" x2="12" y2="16"/>
+                            <line x1="10" y1="14" x2="14" y2="14"/>
+                        </svg>
+                    </div>
                     <h3>Corporate Films</h3>
                     <p>Clean, cinematic corporate videos and internal communications.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon service-icon-mograph"></div>
+                    <div class="service-icon service-icon-mograph">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
                     <h3>Motion Graphics</h3>
                     <p>Title design, lower‑thirds, infographics, and animated explainers.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon service-icon-color"></div>
+                    <div class="service-icon service-icon-color">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a10 10 0 0 1 0 20"/>
+                            <path d="M12 2v20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
                     <h3>Color Grading</h3>
                     <p>Consistent color pipelines and mood‑driven looks for each project.</p>
                 </div>
@@ -968,24 +1037,92 @@
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div>Designed and Built by: </div>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/himanshu3992/" target="_blank" rel="noopener">
-                    HV
-                </a>
-            </div>
         </footer>
     </div>
 
-    <!-- MODAL -->
+    <!-- MODAL - Custom Video Player -->
     <div id="modal-overlay">
         <div class="modal">
-            <button class="modal-close" aria-label="Close video"></button>
-            <div class="modal-body">
-                <video id="modal-video" controls playsinline>
-                    <source src="assets/videos/showreel1.mov" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+            <div class="vp-wrap">
+                <!-- Top bar -->
+                <div class="vp-topbar">
+                    <span class="vp-title" id="vp-title">Playing</span>
+                    <button class="vp-close" id="vp-close" aria-label="Close"></button>
+                </div>
+
+                <!-- Video -->
+                <div class="vp-screen">
+                    <video id="modal-video" playsinline preload="metadata">
+                        <source src="" type="video/mp4" />
+                    </video>
+                    <!-- Big center play button (shows when paused) -->
+                    <div class="vp-center-play" id="vp-center-play">
+                        <div class="vp-center-circle">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                        </div>
+                    </div>
+                    <!-- Buffering spinner -->
+                    <div class="vp-spinner" id="vp-spinner"></div>
+                </div>
+
+                <!-- Controls -->
+                <div class="vp-controls">
+                    <!-- Progress bar -->
+                    <div class="vp-progress" id="vp-progress">
+                        <div class="vp-progress-buf" id="vp-buf"></div>
+                        <div class="vp-progress-fill" id="vp-fill"></div>
+                        <div class="vp-progress-thumb" id="vp-thumb"></div>
+                    </div>
+
+                    <!-- Bottom row -->
+                    <div class="vp-bottom">
+                        <div class="vp-left-controls">
+                            <!-- Play/Pause -->
+                            <button class="vp-btn" id="vp-playpause" aria-label="Play">
+                                <svg class="vp-icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="vp-icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <!-- Skip back -->
+                            <button class="vp-btn" id="vp-back" aria-label="-10s">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/><text x="8.5" y="15" font-size="5" fill="currentColor">10</text></svg>
+                            </button>
+                            <!-- Skip forward -->
+                            <button class="vp-btn" id="vp-fwd" aria-label="+10s">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/><text x="8.5" y="15" font-size="5" fill="currentColor">10</text></svg>
+                            </button>
+                            <!-- Time -->
+                            <span class="vp-time"><span id="vp-cur">0:00</span> / <span id="vp-dur">0:00</span></span>
+                        </div>
+
+                        <div class="vp-right-controls">
+                            <!-- Volume -->
+                            <button class="vp-btn" id="vp-mute" aria-label="Mute">
+                                <svg class="vp-icon-vol" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                                <svg class="vp-icon-muted" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                            </button>
+                            <div class="vp-vol-wrap">
+                                <input type="range" class="vp-vol-slider" id="vp-vol" min="0" max="1" step="0.05" value="1" />
+                            </div>
+                            <!-- Speed -->
+                            <div class="vp-speed-wrap">
+                                <button class="vp-btn vp-speed-btn" id="vp-speed">1x</button>
+                                <div class="vp-speed-menu" id="vp-speed-menu">
+                                    <button data-speed="0.5">0.5x</button>
+                                    <button data-speed="0.75">0.75x</button>
+                                    <button data-speed="1" class="active">1x</button>
+                                    <button data-speed="1.25">1.25x</button>
+                                    <button data-speed="1.5">1.5x</button>
+                                    <button data-speed="2">2x</button>
+                                </div>
+                            </div>
+                            <!-- Fullscreen -->
+                            <button class="vp-btn" id="vp-fs" aria-label="Fullscreen">
+                                <svg class="vp-icon-fs" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                                <svg class="vp-icon-exit-fs" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
