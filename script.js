@@ -266,6 +266,7 @@ function initThreeBackground() {
 function initModals() {
     const overlay     = qs('#modal-overlay');
     const video       = qs('#modal-video');
+    const iframe      = qs('#modal-iframe');
     const source      = video.querySelector('source');
     const titleEl     = qs('#vp-title');
     const closeBtn    = qs('#vp-close');
@@ -292,31 +293,48 @@ function initModals() {
     const centerPlay  = qs('#vp-center-play');
     const spinner     = qs('#vp-spinner');
     const screen      = qs('.vp-screen');
+    const controls    = qs('.vp-controls');
 
     const fmt = s => {
         s = Math.floor(s || 0);
         return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
     };
 
+    const isYT = src => src && (src.includes('youtube.com') || src.includes('youtu.be'));
+
     // ── Open / Close ──
     function openModal(src, label) {
-        source.src = src || '';
-        video.load();
         titleEl.textContent = label || 'Playing';
-        // Reset UI
-        fill.style.width = '0%';
-        buf.style.width  = '0%';
-        thumb.style.left = '0%';
-        curEl.textContent = '0:00';
-        durEl.textContent = '0:00';
-        speedBtn.textContent = '1x';
-        video.playbackRate = 1;
-        speedMenu.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.speed === '1'));
-        updatePlayIcon(false);
         overlay.classList.add('active');
-        // Lock body scroll
         document.body.style.overflow = 'hidden';
-        if (src) video.play().catch(() => {});
+
+        if (isYT(src)) {
+            // YouTube mode
+            video.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = src;
+            // Hide custom controls — YouTube has its own
+            controls.style.display = 'none';
+            centerPlay.classList.remove('visible');
+        } else {
+            // Local video mode
+            iframe.style.display = 'none';
+            iframe.src = '';
+            video.style.display = 'block';
+            controls.style.display = 'flex';
+            source.src = src || '';
+            video.load();
+            fill.style.width = '0%';
+            buf.style.width  = '0%';
+            thumb.style.left = '0%';
+            curEl.textContent = '0:00';
+            durEl.textContent = '0:00';
+            speedBtn.textContent = '1x';
+            video.playbackRate = 1;
+            speedMenu.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.speed === '1'));
+            updatePlayIcon(false);
+            if (src) video.play().catch(() => {});
+        }
     }
 
     function closeModal() {
@@ -324,8 +342,11 @@ function initModals() {
         video.pause();
         source.src = '';
         video.load();
+        iframe.src = '';
+        iframe.style.display = 'none';
+        video.style.display = 'block';
+        controls.style.display = 'flex';
         speedMenu.classList.remove('open');
-        // Restore body scroll
         document.body.style.overflow = '';
     }
 
